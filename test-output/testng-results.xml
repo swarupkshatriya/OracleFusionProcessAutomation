@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-13T05:00:30Z" name="Suite" finished-at="2024-03-13T05:07:20Z" duration-ms="409566">
+    <groups>
+    </groups>
+    <test started-at="2024-03-13T05:00:30Z" name="Test" finished-at="2024-03-13T05:07:20Z" duration-ms="409566">
+      <class name="TestCases.TestCasesClass">
+        <test-method is-config="true" signature="ExtentReportGeneration()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:00:30Z" name="ExtentReportGeneration" finished-at="2024-03-13T05:00:30Z" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExtentReportGeneration -->
+        <test-method signature="TestCase01_Candela_EDI_850_Shipments_Pre_Validation_Report()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:00:30Z" name="TestCase01_Candela_EDI_850_Shipments_Pre_Validation_Report" finished-at="2024-03-13T05:01:55Z" duration-ms="85294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase01_Candela_EDI_850_Shipments_Pre_Validation_Report -->
+        <test-method is-config="true" signature="setupRecorder()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:00:30Z" name="setupRecorder" finished-at="2024-03-13T05:00:30Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupRecorder -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:01:55Z" name="afterMethod" finished-at="2024-03-13T05:01:58Z" duration-ms="2326" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase01_Candela_EDI_850_Shipments_Pre_Validation_Report status=SUCCESS method=TestCasesClass.TestCase01_Candela_EDI_850_Shipments_Pre_Validation_Report()[pri:0, instance:TestCases.TestCasesClass@58695725] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="setupRecorder()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:01:58Z" name="setupRecorder" finished-at="2024-03-13T05:01:58Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupRecorder -->
+        <test-method signature="TestCase02_Collections_Scoring_and_Strategy_Assignment()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:01:58Z" name="TestCase02_Collections_Scoring_and_Strategy_Assignment" finished-at="2024-03-13T05:03:12Z" duration-ms="74506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase02_Collections_Scoring_and_Strategy_Assignment -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:03:12Z" name="afterMethod" finished-at="2024-03-13T05:03:15Z" duration-ms="2312" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase02_Collections_Scoring_and_Strategy_Assignment status=SUCCESS method=TestCasesClass.TestCase02_Collections_Scoring_and_Strategy_Assignment()[pri:0, instance:TestCases.TestCasesClass@58695725] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="TestCase03_Collections_Delinquency_Management()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:03:15Z" name="TestCase03_Collections_Delinquency_Management" finished-at="2024-03-13T05:04:29Z" duration-ms="74231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase03_Collections_Delinquency_Management -->
+        <test-method is-config="true" signature="setupRecorder()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:03:15Z" name="setupRecorder" finished-at="2024-03-13T05:03:15Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupRecorder -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:04:29Z" name="afterMethod" finished-at="2024-03-13T05:04:31Z" duration-ms="2269" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase03_Collections_Delinquency_Management status=SUCCESS method=TestCasesClass.TestCase03_Collections_Delinquency_Management()[pri:0, instance:TestCases.TestCasesClass@58695725] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="TestCase04_Create_Receivables_Accounting()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:04:31Z" name="TestCase04_Create_Receivables_Accounting" finished-at="2024-03-13T05:05:51Z" duration-ms="80291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase04_Create_Receivables_Accounting -->
+        <test-method is-config="true" signature="setupRecorder()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:04:31Z" name="setupRecorder" finished-at="2024-03-13T05:04:31Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupRecorder -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:05:51Z" name="afterMethod" finished-at="2024-03-13T05:05:54Z" duration-ms="2268" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase04_Create_Receivables_Accounting status=SUCCESS method=TestCasesClass.TestCase04_Create_Receivables_Accounting()[pri:0, instance:TestCases.TestCasesClass@58695725] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="TestCases05_Create_Accounting()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:05:54Z" name="TestCases05_Create_Accounting" finished-at="2024-03-13T05:07:17Z" duration-ms="83717" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCases05_Create_Accounting -->
+        <test-method is-config="true" signature="setupRecorder()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:05:54Z" name="setupRecorder" finished-at="2024-03-13T05:05:54Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupRecorder -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:07:17Z" name="afterMethod" finished-at="2024-03-13T05:07:20Z" duration-ms="2343" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCases05_Create_Accounting status=SUCCESS method=TestCasesClass.TestCases05_Create_Accounting()[pri:0, instance:TestCases.TestCasesClass@58695725] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="stopRecording()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:07:20Z" name="stopRecording" finished-at="2024-03-13T05:07:20Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopRecording -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:TestCases.TestCasesClass@58695725]" started-at="2024-03-13T05:07:20Z" name="endReport" finished-at="2024-03-13T05:07:21Z" duration-ms="1463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- TestCases.TestCasesClass -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
