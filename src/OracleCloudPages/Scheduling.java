@@ -87,6 +87,8 @@ public class Scheduling extends ReportingClass{
 	public By processEvent=By.xpath("//label[text()='Process Events']//following::select[1]");
 	public By reportStyle=By.xpath("//label[text()='Report Style']//following::select[1]");
 	
+	public By submitionNotes=By.xpath("//label[text()='Submission Notes']//following::input[1]");
+	public By SubmitionTimeBefore=By.xpath("//label[text()='Submission Time']//following::select[1]");
 	
 	
 	ResuableMethodClass rmc=new ResuableMethodClass();
@@ -118,7 +120,7 @@ public class Scheduling extends ReportingClass{
 	 * @param strDealayTime
 	 * @param strFrequency
 	 */
-	public void schedulingJob_Candela_EDI_850_Shipments_Pre_Validation_Report(WebDriver driver,String strJobName,String strDealayTime,String strFrequency,String strMinute,String strHours,String strStartDate,String strEndDate) {
+	public void schedulingJob_Candela_EDI_850_Shipments_Pre_Validation_Report(WebDriver driver,String strJobName,String strDealayTime,String strFrequency,String strMinute,String strHours,String strStartDate,String strEndDate,String strOuputDataWorkbook,String strOuptDataWorkSheet,String strOutputDataColumn1,String strOuputDataColumn2) {
 		
 		if(rmc.isVisible(driver, HomeImage)) {
 			rmc.click("Clicking on HomeImage",driver, HomeImage);
@@ -151,6 +153,8 @@ public class Scheduling extends ReportingClass{
 			driver.findElement(nameInput).sendKeys(Keys.ENTER);
 		}
 		
+		writeExcelFileforOutputData(strOuputDataWorkbook, strOuptDataWorkSheet,strOuputDataColumn2,strJobName);
+		
 		if(rmc.isClickable(driver, okBtn)) {
 			rmc.click("Clicking on okBtn",driver, okBtn);
 		}
@@ -163,6 +167,13 @@ public class Scheduling extends ReportingClass{
 			rmc.click("Clicking on delayTime",driver, delayTime);
 			rmc.clear(driver, delayTime);
 			rmc.type("delayTime", driver, delayTime, strDealayTime);
+			
+		}
+		
+		if(rmc.isVisible(driver, submitionNotes)) {
+			rmc.click("Clicking on submitionNotes",driver, submitionNotes);
+			rmc.clear(driver, submitionNotes);
+			rmc.type("submitionNotes", driver, submitionNotes, "Swarup Automation Job Scheduling");
 			
 		}
 		
@@ -259,6 +270,8 @@ public class Scheduling extends ReportingClass{
  			 int processIdEndIndex=Str.indexOf("was");
  			 
  			 String processID=Str.substring(processIDstartIndex+1, processIdEndIndex-1);
+ 			 writeExcelFileforOutputData(strOuputDataWorkbook, strOuptDataWorkSheet, strOutputDataColumn1, processID);
+ 			 
  			 try {
 				test.log(LogStatus.INFO, "Process ID is "+processID);
 				
@@ -342,7 +355,7 @@ public class Scheduling extends ReportingClass{
 		
 	}
 	
-	public void schedulingJob_Collections_Scoring_and_Strategy_Assignment(WebDriver driver,String strJobName,String strBussinessUnit,String strFrequency,String strStartDate,String strEndDate) {
+	public void schedulingJob_Collections_Scoring_and_Strategy_Assignment(WebDriver driver,String strJobName,String strBussinessUnit,String strFrequency,String strStartDate,String strEndDate,String strOuputDataWorkbook,String strOuptDataWorkSheet,String strOutputDataColumn1,String strOuputDataColumn2) {
 		
 		if(rmc.isVisible(driver, HomeImage)) {
 			rmc.click("Clicking on HomeImage",driver, HomeImage);
@@ -375,6 +388,8 @@ public class Scheduling extends ReportingClass{
 			driver.findElement(nameInput).sendKeys(Keys.ENTER);
 		}
 		
+		writeExcelFileforOutputData(strOuputDataWorkbook, strOuptDataWorkSheet,strOuputDataColumn2,strJobName);
+		
 		if(rmc.isClickable(driver, okBtn)) {
 			rmc.click("Clicking on okBtn",driver, okBtn);
 		}
@@ -386,6 +401,15 @@ public class Scheduling extends ReportingClass{
 		if(rmc.isVisible(driver, BussinessUnit)) {
 			rmc.selectByVisibleText(driver, BussinessUnit,strBussinessUnit);
 		}
+		
+		if(rmc.isVisible(driver, submitionNotes)) {
+			rmc.click("Clicking on submitionNotes",driver, submitionNotes);
+			rmc.clear(driver, submitionNotes);
+			rmc.type("submitionNotes", driver, submitionNotes, "Swarup Automation Job Scheduling");
+			
+		}
+		
+		
 		
 		rmc.javaScriptExecutor(driver, advancedBtn);
 		
@@ -480,6 +504,10 @@ public class Scheduling extends ReportingClass{
  			 int processIdEndIndex=Str.indexOf("was");
  			 
  			 String processID=Str.substring(processIDstartIndex+1, processIdEndIndex-1);
+ 			 
+ 			 writeExcelFileforOutputData(strOuputDataWorkbook, strOuptDataWorkSheet, strOutputDataColumn1, processID);
+ 			 
+ 			 
  			 try {
 				test.log(LogStatus.INFO, "<B><I>Process ID is "+processID+"</B>");
 				
@@ -564,7 +592,7 @@ public class Scheduling extends ReportingClass{
 	}
 	
 	
-public void Collections_Delinquency_Management(WebDriver driver,String strJobName,String strBussinessUnit,String strMode,String strFrequency,String strStartDate,String strEndDate) {
+public void Collections_Delinquency_Management(WebDriver driver,String strJobName,String strBussinessUnit,String strMode,String strFrequency,String strStartDate,String strEndDate,String strOuputDataWorkbook,String strOuptDataWorkSheet,String strOutputDataColumn1,String strOuputDataColumn2) {
 		
 		if(rmc.isVisible(driver, HomeImage)) {
 			rmc.click("Clicking on HomeImage",driver, HomeImage);
@@ -596,6 +624,8 @@ public void Collections_Delinquency_Management(WebDriver driver,String strJobNam
 			rmc.type("Name", driver, nameInput, strJobName);
 			driver.findElement(nameInput).sendKeys(Keys.ENTER);
 		}
+		
+		writeExcelFileforOutputData(strOuputDataWorkbook, strOuptDataWorkSheet,strOuputDataColumn2,strJobName);
 		
 		if(rmc.isClickable(driver, okBtn)) {
 			rmc.click("Clicking on okBtn",driver, okBtn);
@@ -613,6 +643,14 @@ public void Collections_Delinquency_Management(WebDriver driver,String strJobNam
 			rmc.selectByVisibleText(driver, Mode,strMode);
 		}
 		
+		if(rmc.isVisible(driver, submitionNotes)) {
+			rmc.click("Clicking on submitionNotes",driver, submitionNotes);
+			rmc.clear(driver, submitionNotes);
+			rmc.type("submitionNotes", driver, submitionNotes, "Swarup Automation Job Scheduling");
+			
+		}
+		
+		
 		rmc.javaScriptExecutor(driver, advancedBtn);
 		
 		if(rmc.isVisible(driver, advancedBtn)) {
@@ -706,6 +744,8 @@ public void Collections_Delinquency_Management(WebDriver driver,String strJobNam
  			 int processIdEndIndex=Str.indexOf("was");
  			 
  			 String processID=Str.substring(processIDstartIndex+1, processIdEndIndex-1);
+ 			 
+ 			writeExcelFileforOutputData(strOuputDataWorkbook, strOuptDataWorkSheet,strOutputDataColumn1,processID);
  			 try {
 				test.log(LogStatus.INFO, "<B><I>Process ID is "+processID+"</B>");
 				
@@ -792,7 +832,7 @@ public void Collections_Delinquency_Management(WebDriver driver,String strJobNam
 
 
 
-public void Create_Receivables_Accounting(WebDriver driver,String strJobName,String strPrintFormat,String strMaximum_Bussiness_Worker_Per_Unit,String strLedger,String strLedgerEndDate,String strCreatingAccounting,String strAccountingMode,String strProcessErrorOnly,String strAccountingReportLevel,String strTransfer_To_General_Ledger,String strPost_in_General_Ledger,String strInclude_User_Transaction_Identifier,String strFrequency,String strStartDate,String strEndDate) {
+public void Create_Receivables_Accounting(WebDriver driver,String strJobName,String strPrintFormat,String strMaximum_Bussiness_Worker_Per_Unit,String strLedger,String strLedgerEndDate,String strCreatingAccounting,String strAccountingMode,String strProcessErrorOnly,String strAccountingReportLevel,String strTransfer_To_General_Ledger,String strPost_in_General_Ledger,String strInclude_User_Transaction_Identifier,String strFrequency,String strStartDate,String strEndDate,String strOuputDataWorkbook,String strOuptDataWorkSheet,String strOutputDataColumn1,String strOuputDataColumn2) {
 	
 	if(rmc.isVisible(driver, HomeImage)) {
 		rmc.click("Clicking on HomeImage",driver, HomeImage);
@@ -824,6 +864,8 @@ public void Create_Receivables_Accounting(WebDriver driver,String strJobName,Str
 		rmc.type("Name", driver, nameInput, strJobName);
 		driver.findElement(nameInput).sendKeys(Keys.ENTER);
 	}
+	
+	writeExcelFileforOutputData(strOuputDataWorkbook, strOuptDataWorkSheet,strOuputDataColumn2,strJobName);
 	
 	if(rmc.isClickable(driver, okBtn)) {
 		rmc.click("Clicking on okBtn",driver, okBtn);
@@ -886,6 +928,14 @@ public void Create_Receivables_Accounting(WebDriver driver,String strJobName,Str
 	if(rmc.isVisible(driver, IncludeUserTransactionIdentifier)) {
 		rmc.selectByVisibleText(driver, IncludeUserTransactionIdentifier,strInclude_User_Transaction_Identifier);
 	}
+	
+	if(rmc.isVisible(driver, submitionNotes)) {
+		rmc.click("Clicking on submitionNotes",driver, submitionNotes);
+		rmc.clear(driver, submitionNotes);
+		rmc.type("submitionNotes", driver, submitionNotes, "Swarup Automation Job Scheduling");
+		
+	}
+	
 	
 	rmc.javaScriptExecutor(driver, advancedBtn);
 	
@@ -980,6 +1030,7 @@ public void Create_Receivables_Accounting(WebDriver driver,String strJobName,Str
 			 int processIdEndIndex=Str.indexOf("was");
 			 
 			 String processID=Str.substring(processIDstartIndex+1, processIdEndIndex-1);
+			 writeExcelFileforOutputData(strOuputDataWorkbook, strOuptDataWorkSheet,strOutputDataColumn1,processID);
 			 try {
 			test.log(LogStatus.INFO, "<B><I>Process ID is "+processID+"</B>");
 			
@@ -1165,6 +1216,14 @@ public void Create_Accounting(WebDriver driver,String strJobName,String strSuble
 		rmc.selectByVisibleText(driver, IncludeUserTransactionIdentifier,strInclude_User_Transaction_Identifier);
 	}
 	
+	
+	if(rmc.isVisible(driver, submitionNotes)) {
+		rmc.click("Clicking on submitionNotes",driver, submitionNotes);
+		rmc.clear(driver, submitionNotes);
+		rmc.type("submitionNotes", driver, submitionNotes, "Swarup Automation Job Scheduling");
+		
+	}
+	
 	rmc.javaScriptExecutor(driver, advancedBtn);
 	
 	if(rmc.isVisible(driver, advancedBtn)) {
@@ -1339,7 +1398,113 @@ public void Create_Accounting(WebDriver driver,String strJobName,String strSuble
 				}
 			}
 	
-}
+	}
+
+	public void SearchProcessIDandValidation(WebDriver driver,String strSubmitionTime,String strInputWorkBook,String strInputSheet,String strInputTestCaseName,String strInputParameter1,String strInputParameter2) {
+		
+		String processID=readExcelFileforOutputData(strInputWorkBook, strInputSheet, strInputTestCaseName, strInputParameter1);
+		
+		if(rmc.isVisible(driver, HomeImage)) {
+			rmc.click("Clicking on HomeImage",driver, HomeImage);
+		}
+		
+		rmc.javaScriptExecutor(driver, toolsIcon);
+		
+		if(rmc.isVisible(driver, toolsIcon)) {
+			rmc.click("Clicking on toolsIcon",driver, toolsIcon);
+		}
+		
+		if(rmc.isVisible(driver, scheduleProcess)) {
+			rmc.click("Clicking on scheduleProcess",driver, scheduleProcess);
+		}
+		
+		
+		
+//		if(rmc.isVisible(driver, scheduleNewProcess)) {
+//			rmc.click("Clicking on scheduleNewProcess",driver, scheduleNewProcess);
+//		}
+//		
+//		if(rmc.isVisible(driver, scheduleNewProcessPage)) {
+//			
+//		}
+		
+		 try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			 
+			 if(rmc.isVisible(driver, expandSearch)) {
+				rmc.click("Clicking on expandSearch",driver, expandSearch);
+			  }
+			 
+			 if(rmc.isVisible(driver, processIDTextField)) {
+				rmc.click("Clicking on processIDTextField",driver, processIDTextField);
+				rmc.clear(driver, processIDTextField);
+				rmc.type("processIDTextField", driver, processIDTextField, processID);
+				
+			  }
+			 
+			 if(rmc.isVisible(driver, SubmitionTimeBefore)) {
+					rmc.selectByVisibleText(driver, SubmitionTimeBefore,strSubmitionTime);
+			  }
+			 
+			if(rmc.isVisible(driver, searchButton)) {
+				rmc.click("Clicking on expandSearch",driver, searchButton);
+			}
+			 
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			List<WebElement>list1=driver.findElements(processIDTableRows);
+			if(list1.size()>=1) {
+				test.log(LogStatus.PASS, "<B>Process ID is Available in Table "+processID);
+				try {
+					test.log(LogStatus.INFO, "<B>Process ID is Available in Table ",test.addBase64ScreenShot(rmc.captureScreenshotBase64(driver)));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else {
+				test.log(LogStatus.FAIL, "<B>Process ID is not Available in Table "+processID);
+				try {
+					test.log(LogStatus.INFO, "<B>Process ID is Available in Table ",test.addBase64ScreenShot(rmc.captureScreenshotBase64(driver)));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+			String strJobName=readExcelFileforOutputData(strInputWorkBook, strInputSheet, strInputTestCaseName, strInputParameter2);
+			processName=By.xpath("//span[text()='"+strJobName+"']");
+			
+			String tableJobname=driver.findElement(processName).getText();
+			list1=driver.findElements(processName);
+			
+			if(list1.size()>=1) {
+				test.log(LogStatus.PASS, "<B>Job Name is Available in Table "+strJobName);
+				try {
+					test.log(LogStatus.INFO, "<B>Job Name is Available in Table ",test.addBase64ScreenShot(rmc.captureScreenshotBase64(driver)));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}else {
+				test.log(LogStatus.FAIL, "<B>Job Name is not Available in Table "+tableJobname);
+				try {
+					test.log(LogStatus.INFO, "<B>Job Name is not Available in Table ",test.addBase64ScreenShot(rmc.captureScreenshotBase64(driver)));
+				} catch (Exception e) {
+					
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		
+	}
 	
 	
 	public void logOut(WebDriver driver) {
@@ -1359,5 +1524,6 @@ public void Create_Accounting(WebDriver driver,String strJobName,String strSuble
 			rmc.click("Clicking on confirmBtn",driver, confirmBtn);
 		}
 	}
+	
 	
 }

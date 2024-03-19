@@ -6,8 +6,8 @@
       <class name="TestCases.TestCasesClass">
         <methods>
           <include name="stopRecording"/>
+          <include name="TestCase06_ProcessIDValidation"/>
           <include name="afterMethod"/>
-          <include name="TestCases05_Create_Accounting"/>
           <include name="endReport"/>
           <include name="ExtentReportGeneration"/>
           <include name="setupRecorder"/>
