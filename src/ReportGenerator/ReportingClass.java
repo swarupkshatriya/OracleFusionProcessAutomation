@@ -23,7 +23,7 @@ public class ReportingClass extends ExcelFileReaderClass{
 	public static ExtentReports report;
 	
 	
-	public String testcasename;
+	public static String testcasename;
 	public static String reportName;
 	public String reportGenerationTime;
 	
@@ -44,12 +44,12 @@ public class ReportingClass extends ExcelFileReaderClass{
 		this.reportName = reportName;
 	}
 
-	public String getTestcasename() {
+	public static  String getTestcasename() {
 		return testcasename;
 	}
 
-	public void setTestcasename(String testcasename) {
-		this.testcasename = testcasename;
+	public static void setTestcasename(String strtestcasename) {
+		testcasename = strtestcasename;
 	}
 
 	@BeforeSuite

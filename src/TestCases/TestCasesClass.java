@@ -165,7 +165,7 @@ public class TestCasesClass extends ReportingClass{
 			driver.get(efrc.getTestData("URL"));
 			driver.manage().window().maximize();
 			new OracleCloudPages.Scheduling().Login(driver,efrc.getTestData("UserID"),efrc.getTestData("Password"));
-			new OracleCloudPages.Scheduling().schedulingJob_Candela_EDI_850_Shipments_Pre_Validation_Report(driver,efrc.getTestData("JobName"),efrc.getTestData("DelayTime"),efrc.getTestData("Frequency"),efrc.getTestData("Minutes"),efrc.getTestData("Hours"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate") );
+			new OracleCloudPages.Scheduling().schedulingJob_Candela_EDI_850_Shipments_Pre_Validation_Report(driver,efrc.getTestData("JobName"),efrc.getTestData("DelayTime"),efrc.getTestData("Frequency"),efrc.getTestData("Minutes"),efrc.getTestData("Hours"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate"),efrc.getTestData("OutputDataWorkBook"),efrc.getTestData("OutputDataWorkSheet"),efrc.getTestData("OutputParameter1"),efrc.getTestData("OutputParameter2"));
 			new OracleCloudPages.Scheduling().logOut(driver);	
 			
 		}else {
@@ -202,7 +202,7 @@ public class TestCasesClass extends ReportingClass{
 			driver.get(efrc.getTestData("URL"));
 			driver.manage().window().maximize();
 			new OracleCloudPages.Scheduling().Login(driver,efrc.getTestData("UserID"),efrc.getTestData("Password"));
-			new OracleCloudPages.Scheduling().schedulingJob_Collections_Scoring_and_Strategy_Assignment(driver,efrc.getTestData("JobName"),efrc.getTestData("Bussiness Unit"),efrc.getTestData("Frequency"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate") );
+			new OracleCloudPages.Scheduling().schedulingJob_Collections_Scoring_and_Strategy_Assignment(driver,efrc.getTestData("JobName"),efrc.getTestData("Bussiness Unit"),efrc.getTestData("Frequency"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate"),efrc.getTestData("OutputDataWorkBook"),efrc.getTestData("OutputDataWorkSheet"),efrc.getTestData("OutputParameter1"),efrc.getTestData("OutputParameter2") );
 			new OracleCloudPages.Scheduling().logOut(driver);	
 			
 		}else {
@@ -239,7 +239,7 @@ public class TestCasesClass extends ReportingClass{
 			driver.get(efrc.getTestData("URL"));
 			driver.manage().window().maximize();
 			new OracleCloudPages.Scheduling().Login(driver,efrc.getTestData("UserID"),efrc.getTestData("Password"));
-			new OracleCloudPages.Scheduling().Collections_Delinquency_Management(driver,efrc.getTestData("JobName"),efrc.getTestData("Bussiness Unit"),efrc.getTestData("Mode"),efrc.getTestData("Frequency"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate") );
+			new OracleCloudPages.Scheduling().Collections_Delinquency_Management(driver,efrc.getTestData("JobName"),efrc.getTestData("Bussiness Unit"),efrc.getTestData("Mode"),efrc.getTestData("Frequency"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate"),efrc.getTestData("OutputDataWorkBook"),efrc.getTestData("OutputDataWorkSheet"),efrc.getTestData("OutputParameter1"),efrc.getTestData("OutputParameter2")  );
 			new OracleCloudPages.Scheduling().logOut(driver);	
 			
 		}else {
@@ -276,7 +276,7 @@ public class TestCasesClass extends ReportingClass{
 			driver.get(efrc.getTestData("URL"));
 			driver.manage().window().maximize();
 			new OracleCloudPages.Scheduling().Login(driver,efrc.getTestData("UserID"),efrc.getTestData("Password"));
-			new OracleCloudPages.Scheduling().Create_Receivables_Accounting(driver,efrc.getTestData("JobName"),efrc.getTestData("PrintFormat"),efrc.getTestData("Maximum_Bussiness_Worker_Per_Unit"),efrc.getTestData("Ledger"),efrc.getTestData("LedgerEndDate"),efrc.getTestData("CreatingAccounting"),efrc.getTestData("AccountingMode"),efrc.getTestData("ProcessErrorOnly"),efrc.getTestData("AccountingReportLevel"),efrc.getTestData("Transfer_To_General_Ledger"),efrc.getTestData("Post_in_General_Ledger"),efrc.getTestData("Include_User_Transaction_Identifier"),efrc.getTestData("Frequency"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate") );
+			new OracleCloudPages.Scheduling().Create_Receivables_Accounting(driver,efrc.getTestData("JobName"),efrc.getTestData("PrintFormat"),efrc.getTestData("Maximum_Bussiness_Worker_Per_Unit"),efrc.getTestData("Ledger"),efrc.getTestData("LedgerEndDate"),efrc.getTestData("CreatingAccounting"),efrc.getTestData("AccountingMode"),efrc.getTestData("ProcessErrorOnly"),efrc.getTestData("AccountingReportLevel"),efrc.getTestData("Transfer_To_General_Ledger"),efrc.getTestData("Post_in_General_Ledger"),efrc.getTestData("Include_User_Transaction_Identifier"),efrc.getTestData("Frequency"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate"),efrc.getTestData("OutputDataWorkBook"),efrc.getTestData("OutputDataWorkSheet"),efrc.getTestData("OutputParameter1"),efrc.getTestData("OutputParameter2") );
 			new OracleCloudPages.Scheduling().logOut(driver);	
 			
 		}else {
@@ -314,6 +314,41 @@ public class TestCasesClass extends ReportingClass{
 			driver.manage().window().maximize();
 			new OracleCloudPages.Scheduling().Login(driver,efrc.getTestData("UserID"),efrc.getTestData("Password"));
 			new OracleCloudPages.Scheduling().Create_Accounting(driver,efrc.getTestData("JobName"),efrc.getTestData("Subledger Application"),efrc.getTestData("Ledger"),efrc.getTestData("LedgerEndDate"),efrc.getTestData("AccountingMode"),efrc.getTestData("Process Events"),efrc.getTestData("Report Style"),efrc.getTestData("Transfer_To_General_Ledger"),efrc.getTestData("Post_in_General_Ledger"),efrc.getTestData("Include_User_Transaction_Identifier"),efrc.getTestData("Frequency"),efrc.getTestData("StartDate"),efrc.getTestData("EndDate") );
+			new OracleCloudPages.Scheduling().logOut(driver);	
+			
+		}else {
+			ReportingClass.test.log(LogStatus.SKIP, "<B>Skipping Test Case As Flag is N for the test Case"+getTestcasename()+"</B>");
+			throw new SkipException("Skipping this test case");
+		}
+	
+	}
+	
+	
+	@Test 
+	public void TestCase06_ProcessIDValidation() {
+		before("TestCase06_SearchBasedOnProcessId");
+		ExcelFileReaderClass efrc=new ExcelFileReaderClass();
+		
+		if(efrc.getTestData("Run Mode").equals("Y")&& efrc.getTestData("Status").equalsIgnoreCase("No Run")) {
+			
+//			ChromeOptions options = new ChromeOptions();
+//			options.addArguments("--headless=new");
+//			 driver = new ChromeDriver(options);
+			driver= new ChromeDriver();
+			 try {
+				 SimpleDateFormat dateFormat = new SimpleDateFormat("yy-MM-dd HH-mm-ss");
+				  Date date = new Date();
+				 recorder = new ATUTestRecorder(System.getProperty("user.dir")+"\\ScriptVideos\\","TestVideo-"+getTestcasename()+dateFormat.format(date),false);
+				 recorder.start();
+				 setRecorder(recorder);
+				} catch (ATUTestRecorderException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} 
+			driver.get(efrc.getTestData("URL"));
+			driver.manage().window().maximize();
+			new OracleCloudPages.Scheduling().Login(driver,efrc.getTestData("UserID"),efrc.getTestData("Password"));
+			new OracleCloudPages.Scheduling().SearchProcessIDandValidation(driver,efrc.getTestData("SubmitionTime"),efrc.getTestData("InputDataWorkBook"),efrc.getTestData("InputWorkSheet"),efrc.getTestData("InputTestCaseName"),efrc.getTestData("InputParameter1"),efrc.getTestData("InputParameter2"));
 			new OracleCloudPages.Scheduling().logOut(driver);	
 			
 		}else {
