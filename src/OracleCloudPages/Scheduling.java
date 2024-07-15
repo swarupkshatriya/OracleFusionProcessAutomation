@@ -646,7 +646,7 @@ public void Collections_Delinquency_Management(WebDriver driver,String strJobNam
 		if(rmc.isVisible(driver, submitionNotes)) {
 			rmc.click("Clicking on submitionNotes",driver, submitionNotes);
 			rmc.clear(driver, submitionNotes);
-			rmc.type("submitionNotes", driver, submitionNotes, "Swarup Automation Job Scheduling");
+			rmc.type("submitionNotes", driver, submitionNotes, "SK Automation Job Scheduling");
 			
 		}
 		
